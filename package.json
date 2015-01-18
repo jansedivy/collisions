@@ -1,0 +1,16 @@
+{
+  "name": "collision",
+  "version": "1.0.0",
+  "description": "simple Potion.js app for playing with collisions",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jansedivy/collisions.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/jansedivy/collisions",
+  "dependencies": {
+    "potion": "^0.8.1"
+  }
+}
