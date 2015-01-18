@@ -2,7 +2,7 @@ var Potion = require('potion');
 
 var app;
 
-class GameObject {
+class Bounding {
   constructor(x=0, y=0, width=100, height=100, rotation=0) {
     this.x = x;
     this.y = y;
@@ -296,11 +296,11 @@ app = Potion.init(document.querySelector('.game'), {
     this.debug.addConfig({ name: 'Render Original Object', entry: 'renderOriginalObject', default: false });
 
     this.objects = [];
-    this.objects.push(new GameObject(10, 10, 40, 70));
-    this.objects.push(new GameObject(20, 90, 40, 70));
-    // this.objects.push(new GameObject(40, 300, 320, 60));
+    this.objects.push(new Bounding(10, 10, 40, 70));
+    this.objects.push(new Bounding(20, 90, 40, 70));
+    // this.objects.push(new Bounding(40, 300, 320, 60));
 
-    this.objects.push(new GameObject(100, 40, 100, 50, Math.PI/4));
+    this.objects.push(new Bounding(100, 40, 100, 50, Math.PI/4));
 
     window.addEventListener('mousewheel', e => this.wheel(e.deltaY));
   },
@@ -313,7 +313,7 @@ app = Potion.init(document.querySelector('.game'), {
 
   mousedown() {
     if (app.input.isKeyDown('shift')) {
-      var obj = new GameObject(app.input.mouse.x, app.input.mouse.y, Math.random() * 30 + 40, Math.random() * 30 + 40, Math.random() * Math.PI*2);
+      var obj = new Bounding(app.input.mouse.x, app.input.mouse.y, Math.random() * 30 + 40, Math.random() * 30 + 40, Math.random() * Math.PI*2);
       this.objects.push(obj);
       return;
     }
